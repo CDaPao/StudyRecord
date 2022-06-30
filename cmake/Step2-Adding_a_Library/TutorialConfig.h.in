@@ -1,4 +1,6 @@
 // the configured options and settings for Tutorial
+//####################### Step 2: Adding a Library Begin #######################
 #cmakedefine USE_MYMATH
+//######################## Step 2: Adding a Library End ########################
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@

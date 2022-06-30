@@ -41,6 +41,7 @@ target_link_libraries(Tutorial PUBLIC
 	${EXTRA_LIBS}
 	)
 
+#################### Step 4: Installing and Testing Begin ######################
 # 安装可执行文件
 # 将 Tutorial 这个可执行文件，安装到 bin 目录下
 install(TARGETS Tutorial DESTINATION bin)
@@ -75,3 +76,4 @@ do_test(Tutorial 0.0001 "0.0001 is 0.01")
 
 add_test(TutorialComp100 Tutorial 100)
 set_tests_properties(TutorialComp100 PROPERTIES PASS_REGULAR_EXPORESSION "100 is 10")
+##################### Step 4: Installing and Testing End #######################

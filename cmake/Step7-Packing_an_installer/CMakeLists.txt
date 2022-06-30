@@ -76,7 +76,7 @@ do_test(Tutorial 0.0001 "0.0001 is 0.01")
 add_test(TutorialComp100 Tutorial 100)
 set_tests_properties(TutorialComp100 PROPERTIES PASS_REGULAR_EXPORESSION "100 is 10")
 
-################################ Step7: Packaging an Installer  ################################
+##################### Step 7: Packaging an Installer Begin  #####################
 include(InstallRequiredSystemLibraries) # InstallRequiredSystemLibraries 表示当前平台所需的运行时库：
 # 安装包的许可证
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt") 
@@ -87,4 +87,4 @@ set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
 set(CPACK_SOURCE_GENERATOR "TGZ")
 # CPack 使用上面的变量和当前系统的一些其他属性来设置安装程序
 include(CPack)
-################################ Step7: Packaging an Installer  ################################
+###################### Step 7: Packaging an Installer End  ######################

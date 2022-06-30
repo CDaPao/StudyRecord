@@ -17,6 +17,7 @@ set(Tutorial_VERSION_MINOR 0)
 # .h
 # #define Tutorial_VERSION_MAJOR 1
 
+######################## Step 2: Adding a Library Begin ########################
 # 是否使用自定义的数据库的选项
 option(USE_MYMATH "Use tutorial provided math implementation" ON) # or OFF 
 if(USE_MYMATH)
@@ -25,6 +26,7 @@ if(USE_MYMATH)
 	list(APPEND EXTRA_LIBS MathFunctions)
 	list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
 endif()
+######################### Step 2: Adding a Library End #########################
 
 # 设置配置文件，由配置文件 (.h.in) 生成头文件 (.h)
 #configure_file(TutorialConfig.h.in TutorialConfig.h)	# 默认与 CMakeLists.txt 文件同一目录
@@ -45,6 +47,7 @@ add_executable(Tutorial tutorial.cxx)
 # WIN32：目标 app 运行的平台
 # source1：构建目标 app 的源文件
 
+######################## Step 2: Adding a Library Begin ########################
 # 设置头文件路径。必须放在 add_executable() 后面，否则会报错。
 target_include_directories(Tutorial PUBLIC 
 	"${PROJECT_SOURCE_DIR}"
@@ -57,3 +60,4 @@ target_link_libraries(Tutorial PUBLIC
 	# "${PROJECT_SOURCE_DIR}/MathFunctions"
 	${EXTRA_LIBS}
 	)
+######################### Step 2: Adding a Library End #########################

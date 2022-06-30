@@ -1,3 +1,4 @@
+//########## Step 6: Adding a Custom Command and Generated File Begin ##########
 #include <iostream>
 #include <Table.h>
 #include "MathFunctions.h"
@@ -27,3 +28,4 @@ double mysqrt(double x)
 
   return result;
 }
+//########### Step 6: Adding a Custom Command and Generated File End ###########

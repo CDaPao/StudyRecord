@@ -1,7 +1,8 @@
+########### Step 6: Adding a Custom Command and Generated File Begin ###########
 # 添加 MakeTable 可执行程序
 add_executable(MakeTable MakeTable.cxx)
 
-# 添加一个生成 Table.h 的自定义命令
+# 添加一个由 MakeTable 程序生成 Table.h 的自定义命令
 add_custom_command(
 	OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Table.h
 	COMMAND MakeTable ${CMAKE_CURRENT_BINARY_DIR}/Table.h
@@ -20,6 +21,7 @@ target_include_directories(MathFunctions
 	INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 	PRIVATE ${CMAKE_CURRENT_BINARY_DIR} # 添加 Table.h 的路径
 	)
+############ Step 6: Adding a Custom Command and Generated File End ############
 
 # 安装库
 install(TARGETS MathFunctions DESTINATION lib)

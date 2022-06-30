@@ -4,7 +4,8 @@ add_library(MathFunctions mysqrt.cxx)
 target_include_directories(MathFunctions 
 	INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 	)
-
+    
+################## Step 5: Adding System Introspection Begin ####################
 # 检查是否编译链接成功
 include(CheckCXXSourceCompiles)
 check_cxx_source_compiles("
@@ -30,6 +31,7 @@ if(HAVE_LOG AND HAVE_EXP)
 		PRIVATE "HAVE_LOG" "HAVE_EXP"
 		)
 endif()
+################## Step 5: Adding System Introspection End #####################
 
 # 安装库
 install(TARGETS MathFunctions DESTINATION lib)

@@ -4,8 +4,10 @@ add_library(MathFunctions mysqrt.cxx)
 target_include_directories(MathFunctions 
 	INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 	)
-
+    
+#################### Step 4: Installing and Testing Begin ######################
 # 安装库
 install(TARGETS MathFunctions DESTINATION lib)
 # 安装头文件
 install(FILES MathFunctions.h DESTINATION include)
+##################### Step 4: Installing and Testing End #######################

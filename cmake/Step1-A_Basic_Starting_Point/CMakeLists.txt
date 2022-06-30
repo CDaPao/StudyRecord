@@ -1,10 +1,11 @@
+##################### Step 1: A Basic Starting Point Begin #####################
 cmake_minimum_required(VERSION 3.10)
 
 # 设置项目名和版本号
 project(Tutorial VERSION 1.0)
 
 # 设置 C++ 版本参数来指定 C++ 版本，确保 CMAKE_CXX_STANDARD 变量在 add_executable() 之前设置。
-set(CMAKE_CXX_STANDARD 11)		# C++11
+set(CMAKE_CXX_STANDARD 11)      # C++11
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # 设置配置文件的版本参数
@@ -38,5 +39,6 @@ add_executable(Tutorial tutorial.cxx)
 
 # 设置头文件路径。必须放在 add_executable() 后面，否则会报错。
 target_include_directories(Tutorial
-	PUBLIC "${PROJECT_SOURCE_DIR}/TutorialConfig.h"
-	)
+    PUBLIC "${PROJECT_SOURCE_DIR}/TutorialConfig.h"
+    )
+###################### Step 1: A Basic Starting Point End ######################

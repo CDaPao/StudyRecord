@@ -1,2 +1,4 @@
+//#################### Step 1: A Basic Starting Point Begin ####################
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+//##################### Step 1: A Basic Starting Point End #####################

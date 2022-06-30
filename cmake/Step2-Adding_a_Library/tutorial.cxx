@@ -4,9 +4,11 @@
 #include <string>
 #include "TutorialConfig.h"
 
+//####################### Step 2: Adding a Library Begin #######################
 #ifdef USE_MYMATH
 #include "MathFunctions.h"
 #endif
+//######################## Step 2: Adding a Library End ########################
 
 int main(int argc, char* argv[])
 {
@@ -20,12 +22,17 @@ int main(int argc, char* argv[])
 
   // convert input to double
   const double inputValue = std::stod(argv[1]);
+  
+//####################### Step 2: Adding a Library Begin #######################
+// the configured options and settings for Tutorial
 #ifdef USE_MYMATH
   const double outputValue = mysqrt(inputValue);
 #else
   // calculate square root
   const double outputValue = sqrt(inputValue);
 #endif
+//######################## Step 2: Adding a Library End ########################
+
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
   return 0;
